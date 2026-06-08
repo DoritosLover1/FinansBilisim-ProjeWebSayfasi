@@ -15,7 +15,9 @@ function App() {
     setResult(null);
     setError(null);
 
-    const API_URL = '/api/predict_by_date';
+    // GitHub Pages'te proxy çalışmayacağı için doğrudan ngrok adresini kullanıyoruz.
+    // (Colab'de CORS'u çözdüğümüz için artık proxy'e ihtiyacımız yok!)
+    const API_URL = 'https://untangled-outlast-trousers.ngrok-free.dev/predict_by_date';
 
     try {
       const response = await fetch(API_URL, {
